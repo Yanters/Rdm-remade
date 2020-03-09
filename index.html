@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="switch.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div id="content-1">
+            <div class="header">
+                <div id="refresh" class="icon-button">
+
+                </div>
+                <div id="settings" class="icon-button">
+
+                </div>
+            </div>
+            <div id="counter">
+                <div id="slots_container">
+                    <div class="slots" id="slots_a">
+                        <div class="wrapper"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="inputs">
+                <input placeholder="Min" id="min" type="number">
+
+                <input placeholder="Max" id="max" type="number">
+            </div>
+            <div class="btn" id="generate" data-usable="true">Generuj</div>
+        </div>
+        <div id="content-2">
+            <div class="header" style="margin-bottom: 8px">
+                <div class="title">Settings</div>
+                <div id="close" class="icon-button"></div>
+            </div>
+
+            <div class="switch">
+                <input type="checkbox" id="switch1" class="switch__input" autocomplete="off" checked>
+                <label for="switch1" class="switch__label">No repeat</label>
+            </div>
+
+            <div class="switch">
+                <input type="checkbox" id="switch2" class="switch__input" autocomplete="off">
+                <label for="switch2" class="switch__label">No animations</label>
+            </div>
+            <a href="https://github.com/miloszratajczyk/rsng">https://github.com/miloszratajczyk/rsng</a>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.getElementById("settings").onclick = () => {
+        document.getElementById("content-2").classList.add('visible');
+    }
+
+    document.getElementById("close").onclick = () => {
+        document.getElementById("content-2").classList.remove('visible');
+    }
+</script>
+
+<script src="script.js"></script>
+
+</html>
